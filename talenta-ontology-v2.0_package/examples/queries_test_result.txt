@@ -1,0 +1,6 @@
+Test run: rdflib 7.6.0 against talenta-ontology-v2.0.rdf (no reasoning)
+Q1: Talenta-specific classes with their direct superclass and description: 47 result rows
+Q2: Asset hierarchy – all classes below talenta:Asset (including reused classes attached to it): 147 result rows
+Q3: Talenta object properties with domain and range: 8 result rows
+Q4: Components of the example road bridge and their building materials: 123 result rows
+Q5: GTFS vocabulary terms available for linking timetable / delay data: 69 result rows

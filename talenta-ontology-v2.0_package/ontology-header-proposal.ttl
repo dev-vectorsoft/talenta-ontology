@@ -1,0 +1,38 @@
+# PROPOSAL – Talenta-specific ontology header for a future release.
+# Not yet part of the release file. Before merging it into the release file:
+#   1) replace every line marked TO CLARIFY and remove the leading "#" from it,
+#   2) increase the version (e.g. 2.0.1) if the release file itself is changed,
+#   3) optionally remove the merged third-party header annotations from the owl:Ontology node
+#      (keep them in THIRD_PARTY_NOTICES.md).
+# Valid Turtle as it stands (placeholder lines are comments).
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/dev-vectorsoft/talenta/ontology>
+    a owl:Ontology ;
+    owl:versionIRI <https://github.com/dev-vectorsoft/talenta/ontology/2.0> ;
+    owl:versionInfo "2.0" ;
+    dcterms:title "Talenta Ontology for Digital Twin Asset Management"@en ,
+                  "Talenta-Ontologie für das Asset-Management mit digitalen Zwillingen"@de ;
+    dcterms:description "Ontology developed in the mFUND project Talenta (FKZ 01F2235A–C) for the semantic description and linking of heterogeneous transport infrastructure asset data (assets, bridges, building materials, timetables, sensors, time, geometry) in a knowledge graph for digital-twin-based asset management."@en ,
+                        "Im mFUND-Projekt Talenta (FKZ 01F2235A–C) entwickelte Ontologie zur semantischen Beschreibung und Verknüpfung heterogener Asset-Daten der Verkehrsinfrastruktur (Assets, Brücken, Baustoffe, Fahrpläne, Sensorik, Zeit, Geometrie) in einem Wissensgraphen für das Asset-Management mit digitalen Zwillingen."@de ;
+    dcterms:publisher [ a foaf:Organization ; foaf:name "Vectorsoft AG" ] ;
+    dcterms:creator   [ a foaf:Organization ; foaf:name "Vectorsoft AG" ] ,
+                      [ a foaf:Organization ; foaf:name "Constructor University Bremen gGmbH" ] ,
+                      [ a foaf:Organization ; foaf:name "Concedra GmbH" ] ;
+    rdfs:comment "Funded by the German Federal Ministry of Transport (BMV) within the mFUND program, grant numbers 01F2235A, 01F2235B, 01F2235C. Reused vocabularies keep their own licenses; see THIRD_PARTY_NOTICES.md."@en ;
+    vann:preferredNamespacePrefix "talenta" ;
+    vann:preferredNamespaceUri "https://github.com/dev-vectorsoft/talenta/ontology#" .
+    # TO CLARIFY – license of the Talenta-specific parts (recommendation: CC BY 4.0):
+    # <https://github.com/dev-vectorsoft/talenta/ontology> dcterms:license <https://creativecommons.org/licenses/by/4.0/> .
+    # TO CLARIFY – release date:
+    # <https://github.com/dev-vectorsoft/talenta/ontology> dcterms:issued "YYYY-MM-DD"^^xsd:date .
+    # TO CLARIFY – rights holder / data owner (Dateneigner):
+    # <https://github.com/dev-vectorsoft/talenta/ontology> dcterms:rightsHolder [ a foaf:Organization ; foaf:name "…" ] .
+    # TO CLARIFY – documentation page:
+    # <https://github.com/dev-vectorsoft/talenta/ontology> rdfs:seeAlso <https://github.com/…> .

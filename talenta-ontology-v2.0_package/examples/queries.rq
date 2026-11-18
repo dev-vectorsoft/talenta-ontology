@@ -1,0 +1,44 @@
+# Example SPARQL queries for the Talenta ontology v2.0
+# Tested with Python rdflib 7.x against talenta-ontology-v2.0.rdf (no reasoning).
+PREFIX talenta: <https://github.com/dev-vectorsoft/talenta/ontology#>
+PREFIX trb:     <https://github.com/dev-vectorsoft/talenta/ontology/germanroadbridge#>
+PREFIX gtfs:    <http://vocab.gtfs.org/terms#>
+PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+# --- Q1: Talenta-specific classes with their direct superclass and description
+SELECT ?class ?superclass ?comment WHERE {
+  ?class a owl:Class .
+  FILTER(STRSTARTS(STR(?class), STR(talenta:)))
+  OPTIONAL { ?class rdfs:subClassOf ?superclass . FILTER(isIRI(?superclass)) }
+  OPTIONAL { ?class rdfs:comment ?comment }
+} ORDER BY ?class
+
+# --- Q2: Asset hierarchy – all classes below talenta:Asset (including reused classes attached to it)
+SELECT ?class ?parent WHERE {
+  ?class rdfs:subClassOf+ talenta:Asset ; rdfs:subClassOf ?parent .
+  FILTER(isIRI(?parent))
+} ORDER BY ?parent ?class
+
+# --- Q3: Talenta object properties with domain and range
+SELECT ?property ?domain ?range WHERE {
+  ?property a owl:ObjectProperty .
+  FILTER(STRSTARTS(STR(?property), STR(talenta:)))
+  OPTIONAL { ?property rdfs:domain ?domain }
+  OPTIONAL { ?property rdfs:range ?range }
+} ORDER BY ?property
+
+# --- Q4: Components of the example road bridge and their building materials
+SELECT ?component ?label ?type ?material WHERE {
+  ?component a owl:NamedIndividual ; a ?type .
+  FILTER(STRSTARTS(STR(?component), STR(trb:)) && ?type != owl:NamedIndividual)
+  OPTIONAL { ?component rdfs:label ?label }
+  OPTIONAL { ?component <https://wisib.de/ontologie/bmat#hasBuildingMaterial> ?material }
+} ORDER BY ?type ?label
+
+# --- Q5: GTFS vocabulary terms available for linking timetable / delay data
+SELECT ?term ?kind WHERE {
+  VALUES ?kind { owl:Class owl:ObjectProperty owl:DatatypeProperty }
+  ?term a ?kind .
+  FILTER(STRSTARTS(STR(?term), STR(gtfs:)))
+} ORDER BY ?kind ?term
