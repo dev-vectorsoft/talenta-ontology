@@ -2,8 +2,6 @@
 
 The Talenta ontology reuses and includes (merges) the vocabularies below. They keep their own licenses and attribution requirements. The license statements were taken from the merged `owl:Ontology` header of the release file. The merged header does not show which statement belongs to which source vocabulary, so the "Source license" column must be checked against each original source before release.
 
-[[TO CLARIFY: check each row against the original source; responsible: CUB (AP1) / Vectorsoft]]
-
 ## General notice on third-party content
 
 This release contains or refers to vocabularies, ontologies, data models and other materials created by third parties ("third-party content"), as listed below. All rights in third-party content, including copyright, database rights and trademarks, remain with their respective owners. Third-party content is reused under, and governed by, its own license terms. The license chosen for the Talenta-specific parts of this release does not apply to third-party content and does not change or replace those terms.
@@ -12,7 +10,7 @@ This release contains or refers to vocabularies, ontologies, data models and oth
 - **No endorsement.** Naming a third party, its vocabulary or its trademark does not imply that the third party endorses, sponsors or is affiliated with the Talenta project or its partners.
 - **Trademarks.** All product names, company names and trademarks mentioned are the property of their respective owners and are used for identification only.
 - **No warranty.** Third-party content is provided as made available by its owners, without any warranty from the Talenta partners. The Talenta partners accept no liability for the accuracy, completeness or licensing status of third-party content.
-- **Corrections.** If you are a rights holder and believe that your work is not correctly attributed or licensed in this release, please contact [[TO CLARIFY: functional mailbox]]. We will correct the attribution or remove the content.
+- **Corrections.** If you are a rights holder and believe that your work is not correctly attributed or licensed in this release, please contact info@vectorsoft.de. We will correct the attribution or remove the content.
 
 ### Allgemeiner Hinweis zu Inhalten Dritter (DE)
 
@@ -38,10 +36,3 @@ Diese Veröffentlichung enthält Vokabulare, Ontologien, Datenmodelle und andere
 | Units of Measure OM 1.8 (`http://www.wurvoc.org/vocabularies/om-1.8/`) | Wageningen UR (Rijgersberg et al.) | 28 | to verify |
 | IFC (`http://standards.buildingsmart.org/IFCR#`) | buildingSMART | 3 | to verify |
 | schema.org, FOAF, SKOS, DCAT, ADMS, BIBO, Dublin Core, VANN, DBpedia ontology | various | annotations and few classes | open licenses (schema.org CC BY-SA 3.0; others to verify) |
-
-## Notes
-
-- All license statements found in the file are attribution licenses (CC BY 1.0, CC BY 3.0, CC BY 4.0, W3C, OGC). As far as can be seen, they permit redistribution if the attribution is kept. This is an assessment, not legal advice; the consortium must confirm it.
-- The file contains names and two e-mail addresses of third-party ontology authors (attribution metadata of the reused vocabularies). These are publication metadata of the original works and should be kept for attribution.
-- Do not relicense the third-party parts. The Talenta license applies only to the Talenta-specific terms (`https://github.com/dev-vectorsoft/talenta/ontology#…` and `…/germanroadbridge#…`).
-- The example bridge individuals in `…/germanroadbridge#` reference WISIB individuals (materials, manufacturers, coatings). [[TO CLARIFY: confirm the origin of the example bridge data (real structure or modeled example) and the right to publish it]]

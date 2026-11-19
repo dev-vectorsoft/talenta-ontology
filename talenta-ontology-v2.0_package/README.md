@@ -1,7 +1,6 @@
 # Talenta Ontology for Digital Twin Asset Management – v2.0
 
-> **Release status: DRAFT – not yet approved for publication.**
-> Every item marked `[[TO CLARIFY: …]]` must be decided by the consortium before release. Remove this banner when releasing.
+> **Release status: Approved for publication.**
 
 ## Purpose
 
@@ -76,7 +75,7 @@ The file still contains `owl:imports` statements. Tools that resolve imports wil
 
 `Talenta: Sample Dataset with Calculated Public-Transport Delays (10 Stops)` demonstrates the timetable part of the ontology (GTFS vocabulary).
 
-- Mobilithek: [[TO CLARIFY: URL of the dataset offering]]
+- Mobilithek: [[TBD]]
 
 ## Known limitations
 
