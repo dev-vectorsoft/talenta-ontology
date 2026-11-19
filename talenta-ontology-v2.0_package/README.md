@@ -75,7 +75,7 @@ The file still contains `owl:imports` statements. Tools that resolve imports wil
 
 `Talenta: Sample Dataset with Calculated Public-Transport Delays (10 Stops)` demonstrates the timetable part of the ontology (GTFS vocabulary).
 
-- Mobilithek: [[TBD]]
+- Mobilithek: https://mobilithek.info/offers/1059898169407074304
 
 ## Known limitations
 
@@ -89,7 +89,7 @@ These are recorded for transparency. Fixing them is optional and needs a new ver
 ## Version, license and citation
 
 - **Version:** 2.0 (from `owl:versionIRI`)
-- **Release date:** 2026-11-20
+- **Release date:** 2026-11-19
 - **License of the Talenta-specific parts:** CC BY 4.0
 - **Third-party content:** all rights in the reused vocabularies remain with their respective owners. They are reused under their own license terms, which the Talenta license does not change; see `THIRD_PARTY_NOTICES.md`.
 - **Data owner (Dateneigner):** Vectorsoft AG
